@@ -1,3 +1,3 @@
-isFn = fn(t) {
+function = fn(t) {
 	return fmt.sprintf("%v", type(t)) == "*exec.Function"	
 }

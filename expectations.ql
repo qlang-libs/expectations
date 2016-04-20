@@ -1,17 +1,3 @@
-Expectation = class {
-	fn _init(testingT) {
-		this.testingT = testingT
-	}
-
-	fn truthy() {
-		return equalFn(true)
-	}
-
-	fn falsey() {
-		return equalFn(false)
-	}
-}
-
 Assert = class {
 	fn _init(description, assertFn) {
 		this.description = description
@@ -23,13 +9,5 @@ Assert = class {
 	}
 }
 
-equalFn = fn(expect) {
-	return new Assert(fmt.sprintf("equals to %v", expect), fn(testObj) {
-		return testObj == expect
-	})
-}
-
-create = fn(testingT) {
-	return new Expectation(testingT)
-}
-
+trusty = new Assert(fmt.sprintf("equals to true"), fn(testObj) { return testObj == true })
+falsity = new Assert(fmt.sprintf("equals to false"), fn(testObj) { return testObj == false })
