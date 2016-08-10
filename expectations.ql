@@ -9,5 +9,5 @@ Assert = class {
 	}
 }
 
-trusty = new Assert(fmt.sprintf("equals to true"), fn(testObj) { return testObj == true })
-falsity = new Assert(fmt.sprintf("equals to false"), fn(testObj) { return testObj == false })
+trusty = new Assert("equals to true", fn(testObj) { return testObj == true })
+falsity = new Assert("equals to false", fn(testObj) { return testObj == false })
